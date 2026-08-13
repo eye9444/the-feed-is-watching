@@ -9,6 +9,15 @@ export const posts = [
     sketch: 'headphones',
   },
   {
+    id: 'music-vinyl',
+    topic: 'music',
+    kicker: 'Found in the archive',
+    title: 'The record shop preserving a city’s forgotten voices',
+    body: 'Volunteers digitize local recordings while artists decide how their work may be shared.',
+    signal: 'Music posts have held your attention in this session',
+    sketch: 'vinyl',
+  },
+  {
     id: 'fitness-stretch',
     topic: 'fitness',
     kicker: 'Move gently',
@@ -16,6 +25,15 @@ export const posts = [
     body: 'A physiotherapist demonstrates adaptable stretches, including seated alternatives.',
     signal: 'People who liked wellness explainers also paused here',
     sketch: 'movement',
+  },
+  {
+    id: 'fitness-cycle',
+    topic: 'fitness',
+    kicker: 'Streets for everyone',
+    title: 'A beginner’s guide to a calmer cycle route',
+    body: 'Community riders map shaded stops, repair points, and alternatives for different mobility needs.',
+    signal: 'The system associates movement guides with your recent reactions',
+    sketch: 'bicycle',
   },
   {
     id: 'technology-repair',
@@ -27,6 +45,15 @@ export const posts = [
     sketch: 'phone',
   },
   {
+    id: 'technology-robot',
+    topic: 'technology',
+    kicker: 'AI, explained slowly',
+    title: 'What a tiny sorting robot gets confidently wrong',
+    body: 'An open lab shares failed tests to show why accuracy needs context, oversight, and honest reporting.',
+    signal: 'Technology explainers currently match your inferred interests',
+    sketch: 'robot',
+  },
+  {
     id: 'news-rooftop',
     topic: 'news',
     kicker: 'Local report',
@@ -34,6 +61,15 @@ export const posts = [
     body: 'Residents share what worked, what failed, and who still lacks access to the project.',
     signal: 'The system predicts that local reporting is relevant',
     sketch: 'city',
+  },
+  {
+    id: 'news-factcheck',
+    topic: 'news',
+    kicker: 'Before you repost',
+    title: 'Four clues that a dramatic headline needs checking',
+    body: 'A local reporter traces the original source, date, evidence, and missing context behind a viral claim.',
+    signal: 'The ranking model predicts you may value explanatory reporting',
+    sketch: 'microphone',
   },
   {
     id: 'travel-library',
@@ -45,6 +81,15 @@ export const posts = [
     sketch: 'map',
   },
   {
+    id: 'travel-nighttrain',
+    topic: 'travel',
+    kicker: 'Lower-impact journey',
+    title: 'The overnight train where the route is part of the trip',
+    body: 'Travelers compare cost, accessibility, carbon impact, and the reality behind the romantic photos.',
+    signal: 'Travel content has received positive signals in this session',
+    sketch: 'train',
+  },
+  {
     id: 'gaming-orchard',
     topic: 'gaming',
     kicker: 'Indie release',
@@ -52,6 +97,15 @@ export const posts = [
     body: 'A five-person studio combines gentle strategy, captioned dialogue, and cooperative play.',
     signal: 'You shared content with a similar topic',
     sketch: 'controller',
+  },
+  {
+    id: 'gaming-space',
+    topic: 'gaming',
+    kicker: 'Play together',
+    title: 'A pocket-sized space mystery built for cooperation',
+    body: 'Two players exchange clues across accessible interfaces rather than compete for a leaderboard.',
+    signal: 'The feed predicts a connection to your gaming interactions',
+    sketch: 'spaceship',
   },
 ]
 

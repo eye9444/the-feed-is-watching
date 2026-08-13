@@ -1,4 +1,5 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
+import PostArtwork from './components/PostArtwork.jsx'
 import { chapters, posts, sources } from './data/content.js'
 import {
   TOPICS,
@@ -104,21 +105,7 @@ function ConsentDialog({ open, current, onSave, onContinue }) {
   )
 }
 
-function Sketch({ type }) {
-  return (
-    <div className={`post-sketch sketch-${type}`} aria-hidden="true">
-      <span className="sketch-sun" />
-      <span className="sketch-line line-one" />
-      <span className="sketch-line line-two" />
-      <span className="sketch-object object-one" />
-      <span className="sketch-object object-two" />
-      <span className="sketch-spark spark-one">✦</span>
-      <span className="sketch-spark spark-two">·</span>
-    </div>
-  )
-}
-
-function FeedPost({ post, weight, reasonOpen, onAction, onReason }) {
+function FeedPost({ post, reasonOpen, onAction, onReason }) {
   return (
     <article className={`feed-post topic-${post.topic}`} data-testid={`post-${post.id}`}>
       <header className="post-author">
@@ -127,11 +114,11 @@ function FeedPost({ post, weight, reasonOpen, onAction, onReason }) {
           <strong>@paper.{post.topic}</strong>
           <small>{post.kicker}</small>
         </span>
-        <span className="post-score" title="Current topic score">
-          score {weight}
-        </span>
+        <span className="post-menu" aria-hidden="true">•••</span>
       </header>
-      <Sketch type={post.sketch} />
+      <div className="post-sketch">
+        <PostArtwork type={post.sketch} topic={post.topic} />
+      </div>
       <div className="post-copy">
         <p className="topic-stamp">#{post.topic}</p>
         <h3>{post.title}</h3>
@@ -203,7 +190,7 @@ function DataShadow({
               <span className="weight-track" aria-hidden="true">
                 <span style={{ width: `${(weights[topic] / maxWeight) * 100}%` }} />
               </span>
-              <strong>{weights[topic]}</strong>
+              <strong data-testid={`weight-${topic}`}>{weights[topic]}</strong>
             </div>
           ))}
         </div>
@@ -404,6 +391,9 @@ function App() {
   const [openReason, setOpenReason] = useState(null)
   const [sourcesOpen, setSourcesOpen] = useState(false)
   const [announcement, setAnnouncement] = useState('')
+  const announcementTimer = useRef(null)
+
+  useEffect(() => () => window.clearTimeout(announcementTimer.current), [])
 
   const rankedPosts = useMemo(
     () => rankPosts(posts, weights, personalizationEnabled),
@@ -420,14 +410,19 @@ function App() {
       const locationReason = consent.location && post.topic === 'travel'
         ? ' A fictional approximate-location signal also contributed; your real location was never requested.'
         : ''
-      reason = `${post.signal}. Its current ${post.topic} score is ${weights[post.topic]}.${locationReason}`
+      const strength = weights[post.topic] > 3 ? ' This topic has become a strong ranking signal.' : ''
+      reason = `${post.signal}.${strength}${locationReason}`
     }
     return { ...post, reason }
   })
 
   function announce(message) {
+    window.clearTimeout(announcementTimer.current)
     setAnnouncement('')
-    window.setTimeout(() => setAnnouncement(message), 20)
+    announcementTimer.current = window.setTimeout(() => {
+      setAnnouncement(message)
+      announcementTimer.current = window.setTimeout(() => setAnnouncement(''), 3200)
+    }, 20)
   }
 
   function saveConsent(nextConsent) {
@@ -482,7 +477,7 @@ function App() {
 
   return (
     <>
-      <div className="announcement" aria-live="polite" aria-atomic="true">{announcement}</div>
+      <div className="announcement" role="status" aria-live="polite" aria-atomic="true">{announcement}</div>
       <ConsentDialog
         open={consentOpen}
         current={consent}
@@ -576,7 +571,6 @@ function App() {
                   <FeedPost
                     key={post.id}
                     post={post}
-                    weight={weights[post.topic]}
                     reasonOpen={openReason === post.id}
                     onAction={handleAction}
                     onReason={(id) => setOpenReason((current) => current === id ? null : id)}

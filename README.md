@@ -2,7 +2,7 @@
 
 **Live campaign:** [https://eye9444.github.io/the-feed-is-watching/](https://eye9444.github.io/the-feed-is-watching/)
 
-An interactive public-awareness campaign about social-media recommendation algorithms, designed for a Professional Ethics course. The fictional feed demonstrates how user signals can shape rankings while the accompanying ethics notebook explains benefits, risks, safeguards, rights, and engineers' professional duties.
+An interactive public-awareness campaign about social-media recommendation algorithms, designed for a Professional Ethics course. Twelve fictional feed posts demonstrate how user signals can shape rankings while the accompanying ethics notebook explains benefits, risks, safeguards, rights, and engineers' professional duties. Every post includes an original inline SVG pencil illustration.
 
 > Educational prototype only. This project is not affiliated with any social-media platform and does not collect, persist, or transmit visitor data.
 
@@ -54,7 +54,7 @@ All state lives in React memory. Refreshing the page clears it. The simulation n
 - Keyboard-visible focus, skip link, live status announcements, and 44-pixel controls
 - Responsive layouts for phones and desktops
 - Reduced-motion and print styles
-- Text alternatives or hidden semantics for decorative CSS drawings
+- Text alternatives for meaningful SVG illustrations and hidden semantics for decorative drawings
 - No external fonts, image requests, trackers, or real personal data
 
 ## Deployment

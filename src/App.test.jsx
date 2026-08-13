@@ -1,6 +1,6 @@
-import { render, screen, within } from '@testing-library/react'
+import { act, fireEvent, render, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import App from './App.jsx'
 
 describe('The Feed Is Watching campaign', () => {
@@ -36,7 +36,8 @@ describe('The Feed Is Watching campaign', () => {
     const musicPost = screen.getByTestId('post-music-rain')
     await user.click(within(musicPost).getByRole('button', { name: /like/i }))
 
-    expect(within(musicPost).getByText('score 3')).toBeInTheDocument()
+    expect(screen.getByTestId('weight-music')).toHaveTextContent('3')
+    expect(within(musicPost).queryByText(/score 3/i)).not.toBeInTheDocument()
     expect(screen.getByText(/likely interested in music/i)).toBeInTheDocument()
   })
 
@@ -50,7 +51,7 @@ describe('The Feed Is Watching campaign', () => {
     await user.click(reasonButton)
     expect(reasonButton).toHaveAttribute('aria-expanded', 'true')
     expect(within(musicPost).getByText(/reaction tracking is off/i)).toBeInTheDocument()
-    expect(within(musicPost).getByText('score 1')).toBeInTheDocument()
+    expect(screen.getByTestId('weight-music')).toHaveTextContent('1')
   })
 
   it('deletes the simulation and reopens consent', async () => {
@@ -61,5 +62,18 @@ describe('The Feed Is Watching campaign', () => {
 
     expect(screen.getByRole('dialog', { name: /your choices should come first/i })).toBeInTheDocument()
     expect(screen.getByRole('checkbox', { name: /use reactions to personalize/i })).not.toBeChecked()
+  })
+
+  it('automatically dismisses status notifications', () => {
+    vi.useFakeTimers()
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /continue without optional data/i }))
+
+    act(() => vi.advanceTimersByTime(20))
+    expect(screen.getByRole('status')).toHaveTextContent(/continuing without optional data use/i)
+
+    act(() => vi.advanceTimersByTime(3200))
+    expect(screen.getByRole('status')).toBeEmptyDOMElement()
+    vi.useRealTimers()
   })
 })
