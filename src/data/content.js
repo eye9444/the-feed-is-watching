@@ -6,7 +6,7 @@ export const posts = [
     title: 'A midnight playlist for rainy bus rides',
     body: 'Six independent musicians turn train hums and soft piano into a calm half-hour mix.',
     signal: 'You interacted with music posts',
-    sketch: 'headphones',
+    sketch: 'groovy',
   },
   {
     id: 'music-vinyl',
@@ -15,7 +15,7 @@ export const posts = [
     title: 'The record shop preserving a city’s forgotten voices',
     body: 'Volunteers digitize local recordings while artists decide how their work may be shared.',
     signal: 'Music posts have held your attention in this session',
-    sketch: 'vinyl',
+    sketch: 'dancing',
   },
   {
     id: 'fitness-stretch',
@@ -24,7 +24,7 @@ export const posts = [
     title: 'Seven minutes away from desk stiffness',
     body: 'A physiotherapist demonstrates adaptable stretches, including seated alternatives.',
     signal: 'People who liked wellness explainers also paused here',
-    sketch: 'movement',
+    sketch: 'meditating',
   },
   {
     id: 'fitness-cycle',
@@ -33,7 +33,7 @@ export const posts = [
     title: 'A beginner’s guide to a calmer cycle route',
     body: 'Community riders map shaded stops, repair points, and alternatives for different mobility needs.',
     signal: 'The system associates movement guides with your recent reactions',
-    sketch: 'bicycle',
+    sketch: 'running',
   },
   {
     id: 'technology-repair',
@@ -42,7 +42,7 @@ export const posts = [
     title: 'Could your next phone be easier to fix?',
     body: 'A student engineering team explains modular batteries and the hidden cost of electronic waste.',
     signal: 'Technology currently has a high profile score',
-    sketch: 'phone',
+    sketch: 'selfie',
   },
   {
     id: 'technology-robot',
@@ -51,7 +51,7 @@ export const posts = [
     title: 'What a tiny sorting robot gets confidently wrong',
     body: 'An open lab shares failed tests to show why accuracy needs context, oversight, and honest reporting.',
     signal: 'Technology explainers currently match your inferred interests',
-    sketch: 'robot',
+    sketch: 'unboxing',
   },
   {
     id: 'news-rooftop',
@@ -60,7 +60,7 @@ export const posts = [
     title: 'An empty rooftop becomes a community garden',
     body: 'Residents share what worked, what failed, and who still lacks access to the project.',
     signal: 'The system predicts that local reporting is relevant',
-    sketch: 'city',
+    sketch: 'plant',
   },
   {
     id: 'news-factcheck',
@@ -69,7 +69,7 @@ export const posts = [
     title: 'Four clues that a dramatic headline needs checking',
     body: 'A local reporter traces the original source, date, evidence, and missing context behind a viral claim.',
     signal: 'The ranking model predicts you may value explanatory reporting',
-    sketch: 'microphone',
+    sketch: 'reading-side',
   },
   {
     id: 'travel-library',
@@ -78,7 +78,7 @@ export const posts = [
     title: 'Three quiet libraries worth taking the long route for',
     body: 'A low-cost itinerary built around public spaces, local buses, and accessible entrances.',
     signal: 'Travel is among the interests inferred in this session',
-    sketch: 'map',
+    sketch: 'strolling',
   },
   {
     id: 'travel-nighttrain',
@@ -87,7 +87,7 @@ export const posts = [
     title: 'The overnight train where the route is part of the trip',
     body: 'Travelers compare cost, accessibility, carbon impact, and the reality behind the romantic photos.',
     signal: 'Travel content has received positive signals in this session',
-    sketch: 'train',
+    sketch: 'float',
   },
   {
     id: 'gaming-orchard',
@@ -96,7 +96,7 @@ export const posts = [
     title: 'Grow an orchard on a drifting asteroid',
     body: 'A five-person studio combines gentle strategy, captioned dialogue, and cooperative play.',
     signal: 'You shared content with a similar topic',
-    sketch: 'controller',
+    sketch: 'rolling',
   },
   {
     id: 'gaming-space',
@@ -105,7 +105,7 @@ export const posts = [
     title: 'A pocket-sized space mystery built for cooperation',
     body: 'Two players exchange clues across accessible interfaces rather than compete for a leaderboard.',
     signal: 'The feed predicts a connection to your gaming interactions',
-    sketch: 'spaceship',
+    sketch: 'chilling',
   },
 ]
 
@@ -239,6 +239,11 @@ export const chapters = [
 ]
 
 export const sources = [
+  {
+    name: 'Open Doodles by Pablo Stanley',
+    href: 'https://www.opendoodles.com/about',
+    note: 'CC0 hand-drawn vector illustrations used throughout the fictional feed.',
+  },
   {
     name: 'IEEE-CS/ACM Software Engineering Code of Ethics',
     href: 'https://www.computer.org/education/code-of-ethics',

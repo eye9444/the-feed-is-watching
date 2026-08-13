@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import PostArtwork from './components/PostArtwork.jsx'
 import { chapters, posts, sources } from './data/content.js'
 import {
   TOPICS,
@@ -117,7 +116,13 @@ function FeedPost({ post, reasonOpen, onAction, onReason }) {
         <span className="post-menu" aria-hidden="true">•••</span>
       </header>
       <div className="post-sketch">
-        <PostArtwork type={post.sketch} topic={post.topic} />
+        <img
+          className="post-artwork"
+          src={`${import.meta.env.BASE_URL}illustrations/${post.sketch}.svg`}
+          alt=""
+          loading="lazy"
+        />
+        <span className="art-pencil-label" aria-hidden="true">found in the margins...</span>
       </div>
       <div className="post-copy">
         <p className="topic-stamp">#{post.topic}</p>
@@ -364,7 +369,7 @@ function SourcesDrawer({ open, onClose }) {
         <button className="drawer-close" type="button" onClick={onClose} aria-label="Close sources">×</button>
         <p className="pencil-label">Read the margins</p>
         <h2 id="sources-title">Source notes</h2>
-        <p>These primary sources shaped the campaign. Links open in a new tab.</p>
+        <p>These references and visual sources shaped the campaign. Links open in a new tab.</p>
         <ol>
           {sources.map((source, index) => (
             <li key={source.href}>

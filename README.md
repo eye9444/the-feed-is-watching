@@ -2,7 +2,7 @@
 
 **Live campaign:** [https://eye9444.github.io/the-feed-is-watching/](https://eye9444.github.io/the-feed-is-watching/)
 
-An interactive public-awareness campaign about social-media recommendation algorithms, designed for a Professional Ethics course. Twelve fictional feed posts demonstrate how user signals can shape rankings while the accompanying ethics notebook explains benefits, risks, safeguards, rights, and engineers' professional duties. Every post includes an original inline SVG pencil illustration.
+An interactive public-awareness campaign about social-media recommendation algorithms, designed for a Professional Ethics course. Twelve fictional feed posts demonstrate how user signals can shape rankings while the accompanying ethics notebook explains benefits, risks, safeguards, rights, and engineers' professional duties. The feed uses CC0 hand-drawn vectors from Open Doodles.
 
 > Educational prototype only. This project is not affiliated with any social-media platform and does not collect, persist, or transmit visitor data.
 
@@ -54,7 +54,7 @@ All state lives in React memory. Refreshing the page clears it. The simulation n
 - Keyboard-visible focus, skip link, live status announcements, and 44-pixel controls
 - Responsive layouts for phones and desktops
 - Reduced-motion and print styles
-- Text alternatives for meaningful SVG illustrations and hidden semantics for decorative drawings
+- Decorative feed illustrations use empty alternatives so post text remains the accessible description
 - No external fonts, image requests, trackers, or real personal data
 
 ## Deployment
@@ -69,5 +69,12 @@ The separate Word reflection and editable reflection source are stored in the ig
 - [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
 - [European Commission Trustworthy AI Guidelines](https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai)
 - [European Commission guidance on individual data rights](https://commission.europa.eu/law/law-topic/data-protection/reform/rights-citizens/how-my-personal-data-protected/how-should-my-consent-be-requested_en)
+
+## Visual assets
+
+- [Open Doodles by Pablo Stanley](https://www.opendoodles.com/about), released under CC0. Twelve SVG illustrations are stored locally in `public/illustrations/`.
+- Patrick Hand, distributed under the SIL Open Font License 1.1.
+- Schoolbell, distributed under the Apache License 2.0.
+- Font license texts are included in `public/fonts/`.
 
 Legal protections differ by jurisdiction. Campaign content is ethics education, not legal advice.
