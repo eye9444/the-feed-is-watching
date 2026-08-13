@@ -4,6 +4,8 @@
 
 An interactive public-awareness campaign about social-media recommendation algorithms, designed for a Professional Ethics course. Twelve fictional feed posts demonstrate how user signals can shape rankings while the accompanying ethics notebook explains benefits, risks, safeguards, rights, and engineers' professional duties. The feed uses CC0 hand-drawn vectors from Open Doodles.
 
+**Campaign concept and creative direction:** `eye9444` (the student author). The central idea, ethics framing, interactive concept, visual direction, and final editorial decisions belong to the project author.
+
 > Educational prototype only. This project is not affiliated with any social-media platform and does not collect, persist, or transmit visitor data.
 
 ## Run locally
@@ -72,9 +74,13 @@ The separate Word reflection and editable reflection source are stored in the ig
 
 ## Visual assets
 
-- [Open Doodles by Pablo Stanley](https://www.opendoodles.com/about), released under CC0. Twelve SVG illustrations are stored locally in `public/illustrations/`.
+- [Open Doodles by Pablo Stanley](https://www.opendoodles.com/about), released under CC0. Twelve SVG illustrations are stored locally in `public/illustrations/`. These are third-party hand-drawn vector assets used for visual support; they are not AI-generated and are not presented as original artwork by the student author.
 - Patrick Hand, distributed under the SIL Open Font License 1.1.
 - Schoolbell, distributed under the Apache License 2.0.
 - Font license texts are included in `public/fonts/`.
+
+## AI-use disclosure
+
+AI assistance was used during development to brainstorm campaign structure, draft and refine educational copy, suggest implementation approaches, and help test and debug the React interface. The student author retained responsibility for the campaign idea, creative direction, ethical choices, source selection, factual review, artwork selection, accessibility checks, code integration, and deployment. The final website does not call an AI model at runtime and does not collect visitor data.
 
 Legal protections differ by jurisdiction. Campaign content is ethics education, not legal advice.
