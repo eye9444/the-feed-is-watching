@@ -8,6 +8,17 @@ An interactive public-awareness campaign about social-media recommendation algor
 
 > Educational prototype only. This project is not affiliated with any social-media platform and does not collect, persist, or transmit visitor data.
 
+## Visual assets
+
+- [Open Doodles by Pablo Stanley](https://www.opendoodles.com/about), released under CC0. Twelve SVG illustrations are stored locally in `public/illustrations/`. These are third-party hand-drawn vector assets used for visual support; they are not AI-generated and are not presented as my original artwork.
+- Patrick Hand, distributed under the SIL Open Font License 1.1.
+- Schoolbell, distributed under the Apache License 2.0.
+- Font license texts are included in `public/fonts/`.
+
+## AI-use disclosure
+
+I used AI assistance during development to brainstorm the campaign structure, draft and refine educational copy, suggest implementation approaches, and help test and debug the React interface. I retained responsibility for the campaign idea, creative direction, ethical choices, source selection, factual review, artwork selection, accessibility checks, code integration, and deployment. The final website does not call an AI model at runtime and does not collect visitor data.
+
 ## Run locally
 
 Requires a current Node.js LTS release.
@@ -71,16 +82,5 @@ The separate Word reflection and editable reflection source are stored in the ig
 - [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
 - [European Commission Trustworthy AI Guidelines](https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai)
 - [European Commission guidance on individual data rights](https://commission.europa.eu/law/law-topic/data-protection/reform/rights-citizens/how-my-personal-data-protected/how-should-my-consent-be-requested_en)
-
-## Visual assets
-
-- [Open Doodles by Pablo Stanley](https://www.opendoodles.com/about), released under CC0. Twelve SVG illustrations are stored locally in `public/illustrations/`. These are third-party hand-drawn vector assets used for visual support; they are not AI-generated and are not presented as original artwork by the student author.
-- Patrick Hand, distributed under the SIL Open Font License 1.1.
-- Schoolbell, distributed under the Apache License 2.0.
-- Font license texts are included in `public/fonts/`.
-
-## AI-use disclosure
-
-AI assistance was used during development to brainstorm campaign structure, draft and refine educational copy, suggest implementation approaches, and help test and debug the React interface. The student author retained responsibility for the campaign idea, creative direction, ethical choices, source selection, factual review, artwork selection, accessibility checks, code integration, and deployment. The final website does not call an AI model at runtime and does not collect visitor data.
 
 Legal protections differ by jurisdiction. Campaign content is ethics education, not legal advice.
