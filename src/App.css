@@ -42,6 +42,33 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
+  scrollbar-color: var(--red) var(--paper-deep);
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--paper-deep);
+  border-left: 1px solid rgba(38, 35, 31, 0.28);
+}
+
+::-webkit-scrollbar-thumb {
+  min-height: 56px;
+  background: var(--ink);
+  border: 4px solid var(--paper-deep);
+  border-radius: 9px 5px 8px 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--red);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--paper-deep);
 }
 
 body {
