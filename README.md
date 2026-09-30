@@ -15,10 +15,6 @@ An interactive public-awareness campaign about social-media recommendation algor
 - Schoolbell, distributed under the Apache License 2.0.
 - Font license texts are included in `public/fonts/`.
 
-## AI-use disclosure
-
-I used AI assistance during development for the structure, draft, suggest implementation approaches, and help test and debug the React interface. I retained responsibility for the campaign idea, creative direction, ethical choices, source selection, factual review, artwork selection, accessibility checks, code integration, and deployment. The final website does not call an AI model at runtime and does not collect visitor data.
-
 ## Run locally
 
 Requires a current Node.js LTS release.
